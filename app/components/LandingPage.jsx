@@ -37,90 +37,122 @@ export default function LandingPage() {
     return () => clearInterval(timer);
   }, []);
   return (
-    <div className="flex flex-col items-center justify-center mt-32 sm:mt-32 md:mt-40 px-4 sm:px-6 lg:px-8">
-      <h1 className="text-[20px] sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#29245C] text-center leading-tight">
-        Richmond College 150th Anniversary Raffle Draw
-      </h1>
-      <h2 className="text-[16px] sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#5C2434] mt-3 sm:mt-4 lg:mt-5 text-center">
-        Win Big. Support Bigger.
-      </h2>
-      <p className="text-sm sm:text-base lg:text-lg font-bold text-[#29245C] tracking-[2px] sm:tracking-[3px] mt-20 sm:mt-20 lg:mt-24 text-center">
-        DRAW BEGINS IN
-      </p>
-      <div className="grid grid-flow-col gap-2 sm:gap-3 lg:gap-5 text-center auto-cols-max mt-3 sm:mt-4">
-        <div className="w-[80px] h-[80px] sm:w-[90px] sm:h-[90px] md:w-[100px] md:h-[100px] lg:w-[110px] lg:h-[110px] bg-white/20 backdrop-blur-sm text-[#29245C] rounded">
-          <div className="h-3/4 flex flex-col justify-center">
-            <span className="countdown font-mono text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-[700]">
-              <span
-                style={{ "--value": timeLeft.days }}
-                aria-live="polite"
-                aria-label={`${timeLeft.days} days`}
-              >
-                {timeLeft.days}
+    <div>
+      <div className="flex flex-col items-center justify-center mt-32 sm:mt-32 md:mt-40 px-4 sm:px-6 lg:px-8">
+        <h1 className="text-[20px] sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#29245C] text-center leading-tight">
+          Richmond College 150th Anniversary Raffle Draw
+        </h1>
+        <h2 className="text-[16px] sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#5C2434] mt-3 sm:mt-4 lg:mt-5 text-center">
+          Win Big. Support Bigger.
+        </h2>
+        <p className="text-sm sm:text-base lg:text-lg font-bold text-[#29245C] tracking-[2px] sm:tracking-[3px] mt-20 sm:mt-20 lg:mt-24 text-center">
+          DRAW BEGINS IN
+        </p>
+        <div className="grid grid-flow-col gap-2 sm:gap-3 lg:gap-5 text-center auto-cols-max mt-3 sm:mt-4">
+          <div className="w-[80px] h-[80px] sm:w-[90px] sm:h-[90px] md:w-[100px] md:h-[100px] lg:w-[110px] lg:h-[110px] bg-white/20 backdrop-blur-sm text-[#29245C] rounded">
+            <div className="h-3/4 flex flex-col justify-center">
+              <span className="countdown font-mono text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-[700]">
+                <span
+                  style={{ "--value": timeLeft.days }}
+                  aria-live="polite"
+                  aria-label={`${timeLeft.days} days`}
+                >
+                  {timeLeft.days}
+                </span>
               </span>
-            </span>
+            </div>
+            <p className="text-[8px] sm:text-[9px] lg:text-[10px] h-1/4">
+              DAYS
+            </p>
           </div>
-          <p className="text-[8px] sm:text-[9px] lg:text-[10px] h-1/4">DAYS</p>
-        </div>
-        <div className="flex items-center">
-          <span className="text-xl sm:text-2xl lg:text-3xl">:</span>
-        </div>
-        <div className="w-[80px] h-[80px] sm:w-[90px] sm:h-[90px] md:w-[100px] md:h-[100px] lg:w-[110px] lg:h-[110px] bg-white/20 backdrop-blur-sm text-[#29245C] rounded">
-          <div className="h-3/4 flex flex-col justify-center">
-            <span className="countdown font-mono text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
-              <span
-                style={{ "--value": timeLeft.hours }}
-                aria-live="polite"
-                aria-label={`${timeLeft.hours} hours`}
-              >
-                {timeLeft.hours}
+          <div className="flex items-center">
+            <span className="text-xl sm:text-2xl lg:text-3xl">:</span>
+          </div>
+          <div className="w-[80px] h-[80px] sm:w-[90px] sm:h-[90px] md:w-[100px] md:h-[100px] lg:w-[110px] lg:h-[110px] bg-white/20 backdrop-blur-sm text-[#29245C] rounded">
+            <div className="h-3/4 flex flex-col justify-center">
+              <span className="countdown font-mono text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
+                <span
+                  style={{ "--value": timeLeft.hours }}
+                  aria-live="polite"
+                  aria-label={`${timeLeft.hours} hours`}
+                >
+                  {timeLeft.hours}
+                </span>
               </span>
-            </span>
+            </div>
+            <p className="text-[8px] sm:text-[9px] lg:text-[10px] h-1/4">
+              HOURS
+            </p>
           </div>
-          <p className="text-[8px] sm:text-[9px] lg:text-[10px] h-1/4">HOURS</p>
-        </div>
-        <div className="flex items-center">
-          <span className="text-xl sm:text-2xl lg:text-3xl">:</span>
-        </div>
-        <div className="w-[80px] h-[80px] sm:w-[90px] sm:h-[90px] md:w-[100px] md:h-[100px] lg:w-[110px] lg:h-[110px] bg-white/20 backdrop-blur-sm text-[#29245C] rounded">
-          <div className="h-3/4 flex flex-col justify-center">
-            <span className="countdown font-mono text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
-              <span
-                style={{ "--value": timeLeft.minutes }}
-                aria-live="polite"
-                aria-label={`${timeLeft.minutes} minutes`}
-              >
-                {timeLeft.minutes}
+          <div className="flex items-center">
+            <span className="text-xl sm:text-2xl lg:text-3xl">:</span>
+          </div>
+          <div className="w-[80px] h-[80px] sm:w-[90px] sm:h-[90px] md:w-[100px] md:h-[100px] lg:w-[110px] lg:h-[110px] bg-white/20 backdrop-blur-sm text-[#29245C] rounded">
+            <div className="h-3/4 flex flex-col justify-center">
+              <span className="countdown font-mono text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
+                <span
+                  style={{ "--value": timeLeft.minutes }}
+                  aria-live="polite"
+                  aria-label={`${timeLeft.minutes} minutes`}
+                >
+                  {timeLeft.minutes}
+                </span>
               </span>
-            </span>
+            </div>
+            <p className="text-[8px] sm:text-[9px] lg:text-[10px] h-1/4">
+              MINUTES
+            </p>
           </div>
-          <p className="text-[8px] sm:text-[9px] lg:text-[10px] h-1/4">
-            MINUTES
-          </p>
-        </div>
-        <div className="flex items-center">
-          <span className="text-xl sm:text-2xl lg:text-3xl">:</span>
-        </div>
-        <div className="w-[80px] h-[80px] sm:w-[90px] sm:h-[90px] md:w-[100px] md:h-[100px] lg:w-[110px] lg:h-[110px] bg-white/20 backdrop-blur-sm text-[#29245C] rounded">
-          <div className="h-3/4 flex flex-col justify-center">
-            <span className="countdown font-mono text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
-              <span
-                style={{ "--value": timeLeft.seconds }}
-                aria-live="polite"
-                aria-label={`${timeLeft.seconds} seconds`}
-              >
-                {timeLeft.seconds}
+          <div className="flex items-center">
+            <span className="text-xl sm:text-2xl lg:text-3xl">:</span>
+          </div>
+          <div className="w-[80px] h-[80px] sm:w-[90px] sm:h-[90px] md:w-[100px] md:h-[100px] lg:w-[110px] lg:h-[110px] bg-white/20 backdrop-blur-sm text-[#29245C] rounded">
+            <div className="h-3/4 flex flex-col justify-center">
+              <span className="countdown font-mono text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
+                <span
+                  style={{ "--value": timeLeft.seconds }}
+                  aria-live="polite"
+                  aria-label={`${timeLeft.seconds} seconds`}
+                >
+                  {timeLeft.seconds}
+                </span>
               </span>
-            </span>
+            </div>
+            <p className="text-[8px] sm:text-[9px] lg:text-[10px] h-1/4">
+              SECONDS
+            </p>
           </div>
-          <p className="text-[8px] sm:text-[9px] lg:text-[10px] h-1/4">
-            SECONDS
-          </p>
+        </div>
+        <button className="bg-white backdrop-blur w-28 h-7 sm:w-32 sm:h-8 text-black font-semibold rounded mt-12 sm:mt-12 lg:mt-14 text-sm sm:text-base">
+          Buy Ticket
+        </button>
+      </div>
+      <div className="flex  gap-2 sm:gap-6 lg:gap-8 justify-end sm:justify-end px-4 sm:px-6 lg:px-10 mt-6 sm:mt-8 lg:mt-10">
+        <div className="w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 border-8 sm:border-10 border-[#0000009C] border-t-transparent rounded-full flex justify-center items-center mx-auto sm:mx-0">
+          <div className="flex flex-col items-center">
+            <div className="font-semibold text-sm sm:text-base lg:text-lg">
+              Tickets
+            </div>
+            <div className="font-bold text-lg sm:text-xl lg:text-xl">150</div>
+            <div className="font-semibold text-xs sm:text-sm lg:text-base text-center">
+              Tickets Sold
+            </div>
+          </div>
+        </div>
+        <div className="w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 border-8 sm:border-10 border-[#0000009C] border-t-transparent rounded-full flex justify-center items-center mx-auto sm:mx-0">
+          <div className="flex flex-col items-center">
+            <div className="font-semibold text-sm sm:text-base lg:text-lg">
+              LKR
+            </div>
+            <div className="font-bold text-lg sm:text-xl lg:text-xl">
+              1,000,000
+            </div>
+            <div className="font-semibold text-xs sm:text-sm lg:text-base text-center">
+              Funds Raised
+            </div>
+          </div>
         </div>
       </div>
-      <button className="bg-white backdrop-blur w-28 h-7 sm:w-32 sm:h-8 text-black font-semibold rounded mt-12 sm:mt-12 lg:mt-14 text-sm sm:text-base">
-        Buy Ticket
-      </button>
     </div>
   );
 }
