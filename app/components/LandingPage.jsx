@@ -38,7 +38,7 @@ export default function LandingPage() {
   }, []);
   return (
     <div>
-      <div className="flex flex-col items-center justify-center mt-32 sm:mt-32 md:mt-40 px-4 sm:px-6 lg:px-8">
+      <div className="flex flex-col items-center justify-center mt-20 sm:mt-28 md:mt-40 px-4 sm:px-6 lg:px-8">
         <h1 className="text-[20px] sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#29245C] text-center leading-tight">
           Richmond College 150th Anniversary Raffle Draw
         </h1>
