@@ -45,10 +45,10 @@ export default function Home() {
         <Navbar />
       </div>
       <div className="flex flex-col items-center justify-center mt-32 sm:mt-32 md:mt-40 px-4 sm:px-6 lg:px-8">
-        <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#080436] text-center leading-tight">
+        <h1 className="text-[20px] sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#080436] text-center leading-tight">
           Richmond College 150th Anniversary Raffle Draw
         </h1>
-        <h2 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#ad0202] mt-3 sm:mt-4 lg:mt-5 text-center">
+        <h2 className="text-[16px] sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#ad0202] mt-3 sm:mt-4 lg:mt-5 text-center">
           Win Big. Support Bigger.
         </h2>
         <p className="text-sm sm:text-base lg:text-lg font-bold text-[#080436] tracking-[2px] sm:tracking-[3px] mt-20 sm:mt-20 lg:mt-24 text-center">
@@ -129,7 +129,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <button className="bg-white backdrop-blur w-28 h-7 sm:w-32 sm:h-8 text-black font-semibold rounded mt-8 sm:mt-10 lg:mt-14 text-sm sm:text-base">
+        <button className="bg-white backdrop-blur w-28 h-7 sm:w-32 sm:h-8 text-black font-semibold rounded mt-12 sm:mt-12 lg:mt-14 text-sm sm:text-base">
           Buy Ticket
         </button>
       </div>
