@@ -127,27 +127,29 @@ export default function LandingPage() {
           Buy Ticket
         </button>
       </div>
-      <div className="flex  gap-2 sm:gap-6 lg:gap-8 justify-end sm:justify-end px-4 sm:px-6 lg:px-10 mt-6 sm:mt-8 lg:mt-10">
+      <div className="flex gap-2 sm:gap-6 lg:gap-8 justify-end sm:justify-end px-4 sm:px-6 lg:px-10 mt-6 sm:mt-8 lg:mt-10">
         <div className="w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 border-8 sm:border-10 border-[#0000009C] border-t-transparent rounded-full flex justify-center items-center mx-auto sm:mx-0">
           <div className="flex flex-col items-center">
-            <div className="font-semibold text-sm sm:text-base lg:text-lg">
+            <div className="font-semibold text-sm sm:text-base lg:text-lg leading-[1.2]">
               Tickets
             </div>
-            <div className="font-bold text-lg sm:text-xl lg:text-xl">150</div>
-            <div className="font-semibold text-xs sm:text-sm lg:text-base text-center">
+            <div className="font-bold text-lg sm:text-xl lg:text-xl leading-[1.2]">
+              150
+            </div>
+            <div className="font-semibold text-xs sm:text-sm lg:text-base text-center leading-[1.2]">
               Tickets Sold
             </div>
           </div>
         </div>
         <div className="w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 border-8 sm:border-10 border-[#0000009C] border-t-transparent rounded-full flex justify-center items-center mx-auto sm:mx-0">
           <div className="flex flex-col items-center">
-            <div className="font-semibold text-sm sm:text-base lg:text-lg">
+            <div className="font-semibold text-sm sm:text-base lg:text-lg leading-[1.2]">
               LKR
             </div>
-            <div className="font-bold text-lg sm:text-xl lg:text-xl">
+            <div className="font-bold text-lg sm:text-xl lg:text-xl leading-[1.2]">
               1,000,000
             </div>
-            <div className="font-semibold text-xs sm:text-sm lg:text-base text-center">
+            <div className="font-semibold text-xs sm:text-sm lg:text-base text-center leading-[1.2]">
               Funds Raised
             </div>
           </div>
