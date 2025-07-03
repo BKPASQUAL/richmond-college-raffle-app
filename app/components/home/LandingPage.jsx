@@ -2,36 +2,38 @@
 
 import { useState, useEffect } from "react";
 export default function LandingPage() {
-  const [timeLeft, setTimeLeft] = useState({
-    days: 15,
-    hours: 10,
-    minutes: 24,
-    seconds: 59,
+ const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
   });
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft((prev) => {
-        let { days, hours, minutes, seconds } = prev;
+    const calculateTimeLeft = () => {
+      // Target date: December 31, 2026 at 11:59 PM
+      const targetDate = new Date('2026-12-31T23:59:00');
+      const now = new Date();
+      const difference = targetDate.getTime() - now.getTime();
 
-        if (seconds > 0) {
-          seconds--;
-        } else if (minutes > 0) {
-          seconds = 59;
-          minutes--;
-        } else if (hours > 0) {
-          seconds = 59;
-          minutes = 59;
-          hours--;
-        } else if (days > 0) {
-          seconds = 59;
-          minutes = 59;
-          hours = 23;
-          days--;
-        }
+      if (difference > 0) {
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
         return { days, hours, minutes, seconds };
-      });
+      } else {
+        return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+      }
+    };
+
+    // Set initial time
+    setTimeLeft(calculateTimeLeft());
+
+    // Update every second
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
     }, 1000);
 
     return () => clearInterval(timer);
